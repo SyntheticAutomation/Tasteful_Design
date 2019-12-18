@@ -5,6 +5,8 @@ class UnsplashService
       faraday.headers["Accept-Version"] = 'v1'
       faraday.params["query"] = query
       faraday.params["client_id"] = key
+      faraday.params["orientation"] = 'landscape'
+      faraday.params["per_page"] = '500'
       faraday.response :json, :parser_options => {symbolize_names: true}
       faraday.adapter Faraday.default_adapter
     end

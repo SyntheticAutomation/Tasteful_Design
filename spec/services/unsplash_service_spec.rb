@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Unsplash API Service' do
   it 'can make calls' do
 
-    query = 'kitchen'
+    query = 'interior-design'
     key = ENV['unsplash_access_key']
 
     response = UnsplashService.search(query, key)
